@@ -1,0 +1,130 @@
+:root {
+  --color0: #060b1c;
+  --color1: #0e1428;
+  --color2: #0e1428;
+  --color3: #7024b9;
+  --color4: #e7e7ff;
+  --color5: #fff;
+}
+
+#root {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 2rem;
+  text-align: center;
+}
+
+body {
+  background-color: var(--color0);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+li,
+a,
+span,
+div {
+  color: var(--color4);
+}
+
+a {
+  text-decoration: none;
+}
+
+a:hover {
+  color: var(--color5);
+}
+
+p {
+  font-size: 0.7rem;
+}
+
+h6 {
+  font-size: 0.8rem;
+}
+
+h5 {
+  font-size: 1rem;
+}
+
+h4 {
+  font-size: 1.2rem;
+}
+
+h3 {
+  font-size: 1.4rem;
+}
+
+h2 {
+  font-size: 1.6rem;
+}
+
+h1 {
+  font-size: 1.8rem;
+}
+
+.btn {
+  width: 100%;
+  border-radius: 8px;
+  width: 100%;
+  font-weight: 500;
+  transition: 0.5s;
+  margin-top: 0.7rem;
+}
+
+.btn1 {
+  background-color: var(--color2);
+  color: #fff;
+}
+
+.btn1-outline {
+  background-color: transparent;
+  border: 1px solid var(--color3);
+  color: #fff;
+}
+
+.btn1:hover,
+.btn1-outline:hover {
+  background-color: var(--color3);
+  transition: 0.5s;
+}
+
+@media (min-width: 1024px) {
+  h1 {
+    font-size: 2rem;
+  }
+
+  h2 {
+    font-size: 1.5rem;
+  }
+
+  h3 {
+    font-size: 1.25rem;
+  }
+
+  h4 {
+    font-size: 1rem;
+  }
+
+  h5 {
+    font-size: 0.875rem;
+  }
+
+  h6 {
+    font-size: 0.75rem;
+  }
+
+  p,
+  li {
+    font-size: 0.8rem;
+  }
+
+  .btn {
+    width: 7rem;
+  }
+}
