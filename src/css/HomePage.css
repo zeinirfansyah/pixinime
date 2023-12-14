@@ -3,7 +3,6 @@
   height: 100%;
   display: flex;
   flex-wrap: wrap;
-  gap: 20px;
   justify-content: center;
   align-items: stretch;
   margin: 0 auto;
@@ -11,11 +10,11 @@
 }
 
 .TopAnimeCard {
-  width: 16rem;
+  width: 12rem;
   margin: 10px;
   border-radius: 6px;
   background-color: var(--color0);
-  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  box-shadow: 0 0 6px var(--color3);
   transition: 0.2s ease-in-out;
   filter: brightness(0.9);
 }
@@ -27,10 +26,11 @@
 
 .TopAnimeCard__image img {
   width: 100%;
-  height: 20rem;
+  height: 15rem;
   object-fit: cover;
   object-position: center;
   border-radius: 6px 6px 0 0;
+  filter: contrast(1.15);
 }
 
 .HomePage__FeaturedAnime .topAnime_list {
