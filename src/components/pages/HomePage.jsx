@@ -30,8 +30,17 @@ export const HomePage = () => {
         <div className="HomePage__FeaturedAnime">
           <FeaturedAnimeSlide animeSlide={featuredAnime} />
         </div>
+        <div className="HomePage_Recomendation">
+          <TopAnimeCard
+            topAnime={topAnime.slice(5, 10)}
+            section_title={"Recomendation"}
+          />
+        </div>
         <div className="HomePage__TopAnime">
-          <TopAnimeCard topAnime={topAnime.slice(0, 12)} />
+          <TopAnimeCard
+            topAnime={topAnime.slice(0, 5)}
+            section_title={"Top Anime"}
+          />
         </div>
       </div>
     </>
