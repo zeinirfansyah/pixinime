@@ -24,13 +24,12 @@ const TopAnimeCard = ({ topAnime, section_title }) => {
                     <div className="col">
                       <h6 className="text-start">{anime.title}</h6>
                     </div>
-                    <div className="col-4">
-                      <h6 className="text-end">{anime.score}</h6>
-                    </div>
                   </div>
-                  <div className="row">
+                  <div className="row mb-3">
                     <div className="col">
-                      <p className="text-start">Realease: {anime.year}</p>
+                      <li className="text-start">
+                        Realease: {anime.year || "unknown"}
+                      </li>
                     </div>
                   </div>
                 </div>

@@ -42,64 +42,66 @@ export const FeaturedAnimeSlide = ({ animeSlide }) => {
 
   return (
     <>
-      <Slider {...settings}>
-        {animeSlide &&
-          animeSlide.map((anime) => (
-            <div key={anime.mal_id}>
-              <div
-                className="topAnime_list"
-                style={{
-                  backgroundImage: `url(${anime.trailer.images.maximum_image_url})`,
-                }}
-              >
-                <div className="row">
-                  <div className="col">
-                    <div className="anime-info mt-md-5 text-center text-md-start">
-                      <h1>{anime.title}</h1>
+      <div className="FeaturedAnime">
+        <Slider {...settings}>
+          {animeSlide &&
+            animeSlide.map((anime) => (
+              <div key={anime.mal_id}>
+                <div
+                  className="topAnime_list"
+                  style={{
+                    backgroundImage: `url(${anime.trailer.images.maximum_image_url})`,
+                  }}
+                >
+                  <div className="row">
+                    <div className="col">
+                      <div className="anime-info mt-md-5 text-center text-md-start">
+                        <h1>{anime.title}</h1>
 
-                      <h4>
-                        {anime.score} | {anime.year} | {anime.episodes} eps
-                      </h4>
-                      <h4>{anime.genres.name}</h4>
-                      <h4>{anime.rating}</h4>
+                        <h4>
+                          {anime.score} | {anime.year} | {anime.episodes} eps
+                        </h4>
+                        <h4>{anime.genres.name}</h4>
+                        <h4>{anime.rating}</h4>
 
-                      <hr />
+                        <hr />
 
-                      <p className="d-none d-md-block">
-                        {limitWords(anime.synopsis, 50)} ...
-                      </p>
-                      <div className="animeNav">
-                        <Link
-                          to={`/anime/${anime.mal_id}`}
-                          rel="noreferrer"
-                          className="btn btn1-outline mx-1"
-                        >
-                          More Info
-                        </Link>
-                        <a
-                          href={anime.trailer.url}
-                          target="_blank"
-                          className="btn btn1-outline mx-1"
-                        >
-                          Trailer
-                        </a>
+                        <p className="d-none d-md-block">
+                          {limitWords(anime.synopsis, 50)} ...
+                        </p>
+                        <div className="animeNav">
+                          <Link
+                            to={`/anime/${anime.mal_id}`}
+                            rel="noreferrer"
+                            className="btn btn1-outline mx-1"
+                          >
+                            More Info
+                          </Link>
+                          <a
+                            href={anime.trailer.url}
+                            target="_blank"
+                            className="btn btn1-outline mx-1"
+                          >
+                            Trailer
+                          </a>
+                        </div>
                       </div>
                     </div>
-                  </div>
-                  <div className="col order-first order-lg-0">
-                    <div className="anime-image">
-                      <img
-                        src={anime.images.webp.image_url}
-                        alt={anime.title}
-                        className="mx-auto  my-md-0"
-                      />
+                    <div className="col order-first order-lg-0">
+                      <div className="anime-image">
+                        <img
+                          src={anime.images.webp.image_url}
+                          alt={anime.title}
+                          className="mx-auto  my-md-0"
+                        />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))}
-      </Slider>
+            ))}
+        </Slider>
+      </div>
     </>
   );
 };
