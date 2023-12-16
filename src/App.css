@@ -104,6 +104,12 @@ h1 {
   opacity: 1;
 }
 
+.Footer {
+  margin-top: 1rem;
+  background-color: var(--color1);
+  border-radius: 10px;
+}
+
 @media (min-width: 1024px) {
   h1 {
     font-size: 2rem;

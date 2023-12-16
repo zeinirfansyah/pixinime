@@ -6,6 +6,7 @@ import { HomePage } from "./components/pages/HomePage";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import { AnimeDetail } from "./components/pages/AnimeDetail";
 import { Navbar } from "./components/ui/Navbar";
+import { Footer } from "./components/ui/Footer";
 
 function App() {
   return (
@@ -16,6 +17,7 @@ function App() {
           <Route path="/" element={<HomePage />} />
           <Route path="/anime/:id" element={<AnimeDetail />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </>
   );
